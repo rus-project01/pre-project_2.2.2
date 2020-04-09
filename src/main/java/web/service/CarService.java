@@ -11,17 +11,11 @@ import java.util.List;
 public class CarService  {
     List<Car> cars = new ArrayList<>();
 
-    public List<Car> addCar(Car car) {
-        cars.add(car);
-        return cars;
-    }
-
     public List<Car> listCars() {
+        cars.add(new Car("Solaris", "000", 8));
+        cars.add(new Car("Kopeyka", "123", 15));
+        cars.add(new Car("Lada Kalina", "666", 999999));
         return cars;
-    }
-
-    public void clearCars() {
-        cars.clear();
     }
 
 }

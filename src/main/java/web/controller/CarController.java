@@ -15,10 +15,6 @@ public class CarController {
 
     @GetMapping("/cars")
     public String printCars(@RequestParam("locale") String name, ModelMap model) {
-        carService.clearCars();
-        carService.addCar(new Car("Solaris", "000", 8));
-        carService.addCar(new Car("Kopeyka", "123", 15));
-        carService.addCar(new Car("Lada Kalina", "666", 999999));
         if(name.equals("en")) {
             model.addAttribute("messages", carService.listCars()).addAttribute("names", "CARS");
         } else if (name.equals("ru")) {
